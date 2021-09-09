@@ -9,12 +9,36 @@ class Body extends Component{
             snake: [[25,25], [25,30], [25, 35]],
             gameOver: false,
             start: false,
-            direction: "right",
+            direction: "down",
         };
     }
 
     componentDidMount(){
-        this.interval = setInterval(() => this.appendDown(), 500);
+        this.interval = setInterval(() => this.appendDirection(this.state.direction), 500);
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.interval);
+    }
+
+    appendDirection(direction){
+        switch(direction){
+            case 'right':
+                this.appendRight();
+                break;
+            case 'left':
+                this.appendLeft();
+                break;
+            case 'up':
+                this.appendUp();
+                break;
+            case 'down':
+                this.appendDown();
+                break;
+            default:
+                this.appendRight();
+                break;
+        }
     }
 
     appendRight(){
