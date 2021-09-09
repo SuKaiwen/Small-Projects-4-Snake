@@ -1,10 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import Body from './Components/Body';
+import Header from './Components/Header';
 
 function App() {
   return (
     <div className="App">
-      <h1>Slithery Snake</h1>
+      <Header />
+      <Body />
     </div>
   );
 }

@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+.board {
+    position: relative;
+    margin: 50px auto;
+    width: 600px;
+    height: 600px;
+    border: 2px solid black;
+}
+
+.snake{
+    position: absolute;
+    width: 4%;
+    height: 4%;
+    backgroundColor: white;
+    border: 2px solid black;
+}
+
+@media screen and (max-width: 600px) and (min-width: 0px){
+    .board{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 600px){
+    .board{
+        width: 500px;
+        height: 500px;
+    }
+}
